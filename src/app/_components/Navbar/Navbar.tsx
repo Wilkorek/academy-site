@@ -78,13 +78,13 @@ const Navbar = () => {
           </div>
 
           {/* Mobile hamburger Menu Section */}
-          <div className="md:hidden" onClick={() => setOpen(!open)}>
+          <button className="md:hidden" onClick={() => setOpen(!open)}>
             {open ? (
               <MdClose className="text-4xl text-red-600" /> // Ikona zamknięcia
             ) : (
               <MdMenu className="text-4xl text-primary" /> // Ikona hamburgera
             )}
-          </div>
+          </button>
         </div>
       </nav>
       <ResponsiveMenu open={open} />
