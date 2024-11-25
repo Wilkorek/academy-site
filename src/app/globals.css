@@ -12,6 +12,12 @@
   }
 }
 
+@layer utilities {
+  .drop-shadow {
+    filter: drop-shadow(-6px 8px 15px rgba(19, 72, 82, 0.87));
+  }
+}
+
 :root {
   --primary: #2d6d92;
   --secondary: #e61f51;
