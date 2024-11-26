@@ -5,6 +5,7 @@ import { MdMenu, MdClose, MdSchool } from "react-icons/md"; // Dodano MdClose
 import { AiOutlineHeart } from "react-icons/ai";
 import Link from "next/link";
 import ResponsiveMenu from "./ResponsiveMenu";
+import { motion } from "motion/react";
 
 interface MenuItem {
   id: number;
@@ -41,7 +42,12 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <div className="container flex justify-between items-center py-4 md:pt-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="container flex justify-between items-center py-4 md:pt-4"
+        >
           {/* Logo Section */}
           <div className="flex flex-col items-start">
             {/* Akademia Szachowa napis */}
@@ -85,7 +91,7 @@ const Navbar = () => {
               <MdMenu className="text-4xl text-primary" /> // Ikona hamburgera
             )}
           </button>
-        </div>
+        </motion.div>
       </nav>
       <ResponsiveMenu open={open} />
     </>
